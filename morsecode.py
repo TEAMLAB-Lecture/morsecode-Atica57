@@ -291,7 +291,7 @@ def encoding_sentence(english_sentence):
     cleared_sentence = get_cleaned_english_sentence(english_sentence)
     cleared_sentence = cleared_sentence.upper()
     while cleared_sentence.find("  ") != -1:
-        cleared_sentence.replace("  ", " ")
+        cleared_sentence = cleared_sentence.replace("  ", " ")
     for ch in cleared_sentence :
         if ch != " ":
             result += (encoding_character(ch)+" ")
